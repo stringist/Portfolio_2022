@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- styling -->
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="nav_logo">KT</a>
+
+        <div class="toggle_container">
+            <input type="checkbox" id="toggle_button">
+            <label for="toggle_button" class="switch"></label>
+
+        </div>
+        <div class="links">
+
+            <div class="nav_box"><a href="#projects">Work</a></div>
+            <div class="nav_box"><a href="#about">About</a></div>
+            <div class="nav_box"><a href="#contact">Contact</a></div>
+
+        </div>
+    </nav>
+
+    <body>
+        <article class="detail_article">
+            <div class="text">
+                <h1>Responsive design</h1>
+                <p>In this assignment I tried to find ways to make various components function equally well in both mobile and desktop settings, by using responsive grids and flex box.</p>
+                <a href=" https://stringist.github.io/12c.01.04.responsive-design" class="arrow_link">Visit the page here &#x2794;</a>
+            </div>
+            <div class="image_container"><img src="./assets/responsive_mockup_desktop.png" alt="website mockup"></div>
+        </article>
+        <section>
+            <h3>Images</h3>
+            <div class="image_gallery">
+                <img src="./assets/responsive_combined.png" alt="mobile and desktop versions of contact form">
+                <!-- <figure><img src="./assets/responsive_contact_mobile.png" alt="mobile contact form">
+                    <figcaption></figcaption>
+                </figure>
+                <figure><img src="./assets/responsive_contact_form_desktop.png" alt="desktop contact form">
+                    <figcaption></figcaption>
+                </figure> -->
+
+            </div>
+        </section>
+    </body>
+    <footer>This page is a student project for KEA</footer>
+
+</html>
