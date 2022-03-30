@@ -1,13 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="nav_logo">KT</a>
+
+        <div class="toggle_container">
+            <input type="checkbox" id="toggle_button">
+            <label for="toggle_button" class="switch"></label>
+
+        </div>
+        <div class="links">
+
+            <div class="nav_box"><a href="#projects">Work</a></div>
+            <div class="nav_box"><a href="#about">About</a></div>
+            <div class="nav_box"><a href="#contact">Contact</a></div>
+
+        </div>
+    </nav>
+    <header>
+        <div class="spacer_container_top">
+            <div class="spacer_top_L"></div>
+            <div class="spacer_top_R"></div>
+        </div>
+        <div class="nametag">
+            <div>
+                <p>Hi, my name is</p>
+            </div>
+            <div class="cbcb"></div>
+        </div>
+        <div class="name_container">
+            <h1><span class="first_name">Kalle</span> <span class="last_name">Tiihonen</span></h1>
+        </div>
+        <div class="spacer_container_bottom">
+            <div class="spacer_bottom_L"></div>
+            <div class="spacer_bottom_R spacer_text">
+                <p>I am a...</p>
+                <p>Multimedia design student living in Copenhagen</p>
+            </div>
+        </div>
+        <a href="#projects">
+            <div class="arrow_container"></div>
+        </a>
+    </header>
+    <main>
+        <section id="projects">
+            <div class="projects_header">
+                <div class="links_list">
+                    <ul>
+                        <li><button class="button_1"><a href="#cards">Design for Developers</a></button></li>
+                        <li><button class="button_2"><a href="#colors">"Hacked Hogwarts List"</a></button></li>
+                        <li><button class="button_3"><a href="#responsive">The Party Devil Pre-Game Game</a></button></li>
+                        <li><button class="button_4"><a href="#framework">Green Wardrobe Club</a></button></li>
+                    </ul>
+                </div>
+                <div class="projects_h2_container">
+                    <h2>Projects</h2>
+                </div>
+            </div>
+            <article id="cards">
+                <div class="project_text card_text">
+                    <h3>Design for Developers</h3>
+                    <p>A series of mini-projects covering UI cards, font choices, visual hierarchies, color and animation, dark mode, responsive design, and an introduction to frameworks. </p>
+                    <a href="./design_for_developers.html" class="arrow_link">Read more &#x2794;</a>
+                </div>
+                <div class="cards_graphic">
+                    <div class="card_container card_1 UI_card"></div>
+                    <div class="card_container card_2 UI_card"></div>
+                    <div class="card_container card_3 UI_card"></div>
+                </div>
+            </article>
+            <article id="colors" class="odd">
+                <div class="cube_graphic">
+                    <div class="three_cube_container">
+                        <div class="cube cube_1"></div>
+                        <div class="cube cube_2"></div>
+                        <div class="cube cube_3"></div>
+                    </div>
+                </div>
+                <div class="project_text card_text">
+                    <h3>Colors &amp; Animations</h3>
+                    <p>Light mode, dark mode, and a bit of movement.</p>
+                    <a href="./colors_and_animation.html" class="arrow_link">Read more &#x2794;</a>
+                </div>
+            </article>
+            <article id="responsive">
+                <div class="project_text card_text">
+                    <h3>Responsive Design</h3>
+                    <p>Building pages that function flawlessly across all devices.</p>
+                    <a href="./responsive.html" class="arrow_link">Read more &#x2794;</a>
+                </div>
+                <div class="cards_graphic responsive">
+                    <div class="device_container"></div>
+                </div>
+            </article>
+            <article id="framework" class="odd">
+                <div class="project_text card_text">
+                    <h3>Frameworks</h3>
+                    <p>An introductory experience with the power of Pico.</p>
+                    <a href="./frameworks.html" class="arrow_link">Read more &#x2794;</a>
+                </div>
+                <div class="cards_graphic framework_graphic"></div>
+            </article>
+        </section>
+        <section id="about">
+            <h3>About</h3>
+            <p>I am a multidisciplinary creative and aspiring front-end developer with a fine arts background, currently studying Multimedia Design at KEA in Copenhagen.
+
+                <p>Some of the areas covered so far at KEA have been UI design and development, UX, content creation, and technology and business. In the course of my studies, I discovered a new passion in front-end development, which has only been re-affirmed
+                    by taking the front-end elective. Following this, I am now seeking an internship in this field, and dreaming of a future position where I can pursue hands-on web programming while still being able to draw upon and utilize my visual
+                    arts background. I am especially interested in developing my abilities in animating with JavaScript, and in exploring the expressive potentials of using animations to bring pages to life.</p>
+                <p> Outside of studying at KEA, I have been working professionally as a glassblower for the past 10 years in a variety of settings, from private studios to factory work, as well as teaching. As a result of these experiences, I deeply value
+                    quality craftsmanship and good teamwork, and have developed a borderline unhealthy attention to detail. When not blowing glass or studying, I can usually be found playing thrash metal with my band Terminalist, either at our practice
+                    space in Nørrebro or at various venues around Denmark.</p>
+            </p>
+        </section>
+        <section id="contact">
+            <h3>Get in touch</h3>
+            <p>Want to reach out?</p>
+            <form id="contact_form">
+                <div class="form_group" id="name_group">
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" name="Name" required />
+                </div>
+
+                <div class="form_group" id="email_group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="Email" required />
+                </div>
+
+                <div class="form_group" id="message_area">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="Message" required></textarea>
+                </div>
+
+                <div class="form_group" id="submit_button">
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>This page is a student project for KEA</p>
+    </footer>
+</body>
+<!-- <script src="./script.js"></script> -->
+<script type="module" src="/main.js"></script>
+
 </html>
