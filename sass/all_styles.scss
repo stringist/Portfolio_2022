@@ -279,8 +279,14 @@ header {
 }
 
 .arrow_link {
+    display: inline-block;
     color: $grey;
     font-weight: 600;
+    &:hover {
+        transform: scale(1.1);
+        color: rgb(215, 93, 0);
+        transition: all .3s;
+    }
 }
 
 header h1 {
@@ -347,7 +353,8 @@ section {
         border-top: $grey_border;
         border-right: none;
         border-bottom: none;
-        font-size: 1rem;
+        // font-size: 1rem;
+        font-size: 112.5%;
         font-weight: 400;
         a {
             color: $grey;
@@ -446,15 +453,15 @@ section {
 }
 
 .card_1 {
-    background-image: url("./assets/card_1_grey.svg");
+    background-image: url("../assets/card_1_grey.svg");
 }
 
 .card_2 {
-    background-image: url("./assets/card_2_grey.svg");
+    background-image: url("../assets/card_2_grey.svg");
 }
 
 .card_3 {
-    background-image: url("./assets/card_3_grey.svg");
+    background-image: url("../assets/card_3_grey.svg");
 }
 
 
@@ -509,7 +516,7 @@ section {
 /* responsive project styling */
 
 .device_container {
-    background-image: url("./assets/screen_grey.svg");
+    background-image: url("../assets/screen_grey.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -531,7 +538,7 @@ section {
 
 .framework_graphic {
     height: 12rem;
-    background-image: url("./assets/stacks.svg");
+    background-image: url("../assets/stacks.svg");
     background-position: center;
 }
 
