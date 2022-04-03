@@ -115,6 +115,10 @@ div.links {
     a {
         padding: 1.5rem;
     }
+    &:hover {
+        filter: invert(360);
+        transition: all .3s;
+    }
 }
 
 .nav_logo {
