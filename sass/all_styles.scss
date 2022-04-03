@@ -15,6 +15,7 @@ $grey: #222;
 }
 
 html {
+    scroll-behavior: smooth;
     font-size: 112.5%;
 }
 
@@ -85,6 +86,15 @@ ul li a {
     text-decoration: none;
 }
 
+.nav_wrapper {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.758);
+    z-index: 100;
+    // background-blend-mode: difference;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -112,17 +122,19 @@ div.links {
     font-weight: 500;
     height: 3rem;
     border-left: $grey_border;
-    background-color: #fff;
+    // background-color: #fff;
     a {
         padding: 1.5rem;
     }
     &:hover {
-        filter: invert(360);
-        transition: all .3s;
+        background-color: #222;
+        color: #fff;
+        transition: all .5s;
     }
 }
 
 .nav_logo {
+    background-color: #fff;
     width: 6rem;
     font-family: var(--display);
     font-weight: 800;
@@ -193,6 +205,7 @@ input:checked+label:after {
 header {
     margin-left: 6rem;
     margin-right: 6rem;
+    padding-top: 4rem;
 }
 
 .spacer_container_top {
@@ -302,6 +315,7 @@ header h1 {
 section {
     margin-left: 4vw;
     margin-right: 4vw;
+    scroll-margin-top: 6rem;
     /* margin-bottom: 22vw; */
 }
 
