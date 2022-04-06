@@ -10,6 +10,7 @@ export function startAnimations() {
     cubesAni();
     screenAni();
     getSVGS();
+    hogwartsAni();
     // devilAni();
 }
 // animations
@@ -112,3 +113,5 @@ function devilAni() {
         x: () => Math.random() * 200 - 100,
     });
 }
+
+function hogwartsAni() {}
