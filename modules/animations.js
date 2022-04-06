@@ -11,6 +11,7 @@ export function startAnimations() {
     screenAni();
     getSVGS();
     hogwartsAni();
+    gwcAni();
     // devilAni();
 }
 // animations
@@ -82,18 +83,25 @@ function screenAni() {
 }
 
 function devilAni() {
-    console.log("devilAni")
-        // const svgContent = document.querySelector("svg *");
+    const paths = document.querySelectorAll(".party_devil_container svg path");
+    const circles = document.querySelectorAll(".party_devil_container svg circle");
+    const ellipses = document.querySelectorAll(".party_devil_container svg ellipse");
+    const polys = document.querySelectorAll(".party_devil_container svg polygon");
+    const svgContent = [paths, ellipses, polys, circles];
+    const allContent = document.querySelectorAll(".party_devil_container svg *");
     const devilContainer = document.querySelector(".party_devil_container");
-    // "drawing effect"   
-    // gsap.from("svg *", {
-    //     duration: .08,
-    //     opacity: -1.5,
-    //     stagger: .03,
-    //     scrollTrigger: { trigger: devilContainer, markers: false, start: "top 40%", end: "bottom 50%", toggleActions: "play reverse play reverse" },
-    //     y: () => Math.random() * 200 - 100,
-    //     x: () => Math.random() * 200 - 100,
-    // });
+    "drawing effect"
+    gsap.from(allContent, {
+        duration: .05,
+        opacity: 0,
+        stagger: .06,
+        yoyo: true,
+        repeat: -1,
+        repeatDelay: 1.5,
+        scrollTrigger: { trigger: devilContainer, markers: false, start: "top 40%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
+        y: () => Math.random() * 200 - 100,
+        x: () => Math.random() * 200 - 100,
+    });
     // backup drawing effect
     //  gsap.from("svg *", {
     //         duration: .1,
@@ -104,14 +112,24 @@ function devilAni() {
     //         x: () => Math.random() * 200 - 100,
     //     });
     // "assembling" effect
-    gsap.from("svg *", {
-        duration: 2,
-        opacity: -1.5,
-        stagger: .001,
-        scrollTrigger: { trigger: devilContainer, markers: true, start: "top 80%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
-        y: () => Math.random() * 200 - 100,
-        x: () => Math.random() * 200 - 100,
-    });
+
+
+    // gsap.from(svgContent, {
+    //     duration: 2,
+    //     opacity: -1.2,
+    //     stagger: .001,
+    //     scrollTrigger: { trigger: devilContainer, markers: false, start: "top 80%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
+    //     y: () => Math.random() * 200 - 100,
+    //     x: () => Math.random() * 200 - 100,
+    // });
 }
 
 function hogwartsAni() {}
+
+function gwcAni() {
+    const logoStuff = document.querySelectorAll(".gwc_graphic svg path");
+    console.log(logoStuff);
+    const fadetl = gsap.timeline({ repeat: -1, repeatDelay: 2.5 });
+    fadetl.fromTo(logoStuff, { duration: .1, opacity: 0, stagger: { each: .1 } }, { duration: 2, opacity: .9, stagger: { each: .08, ease: "sine" } });
+    fadetl.to(logoStuff, { delay: 5, opacity: 0, duration: 1.5 })
+}

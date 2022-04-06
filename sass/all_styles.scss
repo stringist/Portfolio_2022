@@ -760,3 +760,15 @@ button:hover {
 // .pd_right {
 //     background-image: url("../assets/SVG/party_devil_right.svg");
 // }
+#gwc {
+    // place-items: center;
+}
+
+.gwc_graphic {
+    align-items: center;
+    grid-column: 1/3;
+    width: 40%;
+    height: auto;
+    margin: auto;
+    filter: opacity(.85)
+}
