@@ -84,6 +84,25 @@ function devilAni() {
     console.log("devilAni")
         // const svgContent = document.querySelector("svg *");
     const devilContainer = document.querySelector(".party_devil_container");
+    // "drawing effect"   
+    gsap.from("svg *", {
+        duration: .08,
+        opacity: -1.5,
+        stagger: .03,
+        scrollTrigger: { trigger: devilContainer, markers: false, start: "top 40%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
+        y: () => Math.random() * 200 - 100,
+        x: () => Math.random() * 200 - 100,
+    });
+    // backup drawing effect
+    //  gsap.from("svg *", {
+    //         duration: .1,
+    //         opacity: -1,
+    //         stagger: .03,
+    //         scrollTrigger: { trigger: devilContainer, markers: false, start: "top 70%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
+    //         y: () => Math.random() * 200 - 100,
+    //         x: () => Math.random() * 200 - 100,
+    //     });
+    // "assembling" effect
     gsap.from("svg *", {
         duration: .1,
         opacity: -1,
@@ -92,5 +111,4 @@ function devilAni() {
         y: () => Math.random() * 200 - 100,
         x: () => Math.random() * 200 - 100,
     });
-
 }
