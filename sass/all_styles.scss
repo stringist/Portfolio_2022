@@ -143,6 +143,10 @@ div.links {
     font-size: 2rem;
     text-align: center;
     border-right: $grey_border;
+    &:hover {
+        background-color: #cbcbcb4e;
+        // filter: opacity(.7);
+    }
 }
 
 
@@ -730,3 +734,29 @@ button:hover {
 .squad {
     background-image: url("../assets/squad_selected_grey_1.svg");
 }
+
+.party_devil_container {
+    grid-column: 2/4;
+    // max-height: 30vw;
+    // min-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    svg {
+        height: 40vw;
+    }
+}
+
+// .pd_left,
+// .pd_right {
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     height: 95%;
+//     width: 40%;
+// }
+// .pd_left {
+//     background-image: url("../assets/SVG/party_devil_left.svg");
+// }
+// .pd_right {
+//     background-image: url("../assets/SVG/party_devil_right.svg");
+// }
