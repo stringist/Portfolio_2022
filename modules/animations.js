@@ -90,46 +90,59 @@ function devilAni() {
     const svgContent = [paths, ellipses, polys, circles];
     const allContent = document.querySelectorAll(".party_devil_container svg *");
     const devilContainer = document.querySelector(".party_devil_container");
-    "drawing effect"
-    gsap.from(allContent, {
-        duration: .05,
-        opacity: 0,
-        stagger: .06,
+
+
+    // "assembling" effect
+    gsap.from(svgContent, {
+        delay: -.5,
+        duration: 2.5,
+        opacity: -1,
+        stagger: .001,
         yoyo: true,
         repeat: -1,
-        repeatDelay: 1.5,
-        scrollTrigger: { trigger: devilContainer, markers: false, start: "top 40%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
+        repeatDelay: 1.8,
+        scrollTrigger: { trigger: devilContainer, markers: false, start: "top 80%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
         y: () => Math.random() * 200 - 100,
         x: () => Math.random() * 200 - 100,
     });
-    // backup drawing effect
-    //  gsap.from("svg *", {
-    //         duration: .1,
-    //         opacity: -1,
-    //         stagger: .03,
-    //         scrollTrigger: { trigger: devilContainer, markers: false, start: "top 70%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
-    //         y: () => Math.random() * 200 - 100,
-    //         x: () => Math.random() * 200 - 100,
-    //     });
-    // "assembling" effect
-
-
-    // gsap.from(svgContent, {
-    //     duration: 2,
-    //     opacity: -1.2,
-    //     stagger: .001,
-    //     scrollTrigger: { trigger: devilContainer, markers: false, start: "top 80%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
-    //     y: () => Math.random() * 200 - 100,
-    //     x: () => Math.random() * 200 - 100,
-    // });
 }
+// "drawing effect"
+// gsap.from(allContent, {
+//     duration: .05,
+//     opacity: 0,
+//     stagger: .06,
+//     yoyo: true,
+//     repeat: -1,
+//     repeatDelay: 1.8,
+//     scrollTrigger: { trigger: devilContainer, markers: false, start: "top 40%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
+//     y: () => Math.random() * 200 - 100,
+//     x: () => Math.random() * 200 - 100,
+// });
 
-function hogwartsAni() {}
+// "assembling" effect
+
+
+
+function hogwartsAni() {
+    const icons = document.querySelectorAll(".hogwarts_container *");
+    const tl = gsap.timeline({ repeat: Infinity, yoyo: true, duration: 2, repeatDelay: 0, ease: "none", });
+
+    tl.from(icons, { opacity: .5, duration: 1, y: -20, stagger: { each: .2 }, ease: "back" });
+    tl.to(icons, { opacity: 1, duration: 1, y: 20, stagger: { each: -.2 }, ease: "back" });
+    tl.to(icons, { opacity: 1, duration: 1, y: 0, stagger: { each: .2 }, ease: "back" });
+    tl.to(icons, { opacity: .5, duration: 1, y: -20, stagger: { each: -.2 }, ease: "back" });
+    // tl.fromTo(icons, { y: 0, duration: 1, stagger: { each: .5 } }, { y: -20, duration: 1, stagger: { each: .5 } })
+    // tl.to(icons, { y: -20, duration: 1, stagger: { each: .5 } }, { y: 0, duration: 1, stagger: { each: .5 } })
+
+
+
+    // tl.fromTo(icons, { opacity: 1, y: -20, stagger: { each: -.2 }, ease: "back" }, { opacity: .6, y: 0, stagger: { each: -.2 }, ease: "back" })
+}
 
 function gwcAni() {
     const logoStuff = document.querySelectorAll(".gwc_graphic svg path");
     console.log(logoStuff);
-    const fadetl = gsap.timeline({ repeat: -1, repeatDelay: 2.5 });
+    const fadetl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
     fadetl.fromTo(logoStuff, { duration: .1, opacity: 0, stagger: { each: .1 } }, { duration: 2, opacity: .9, stagger: { each: .08, ease: "sine" } });
-    fadetl.to(logoStuff, { delay: 5, opacity: 0, duration: 1.5 })
+    fadetl.to(logoStuff, { delay: 3, opacity: 0, duration: 1.5 })
 }
