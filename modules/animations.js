@@ -85,9 +85,10 @@ function devilAni() {
         // const svgContent = document.querySelector("svg *");
     const devilContainer = document.querySelector(".party_devil_container");
     gsap.from("svg *", {
-        duration: 3,
+        duration: .1,
         opacity: -1,
-        scrollTrigger: { trigger: devilContainer, markers: true, start: "top 75%", end: "bottom 30%", toggleActions: "play reverse play reverse" },
+        stagger: .03,
+        scrollTrigger: { trigger: devilContainer, markers: false, start: "top 70%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
         y: () => Math.random() * 200 - 100,
         x: () => Math.random() * 200 - 100,
     });
