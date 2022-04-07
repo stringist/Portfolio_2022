@@ -92,7 +92,8 @@ function devilAni() {
     const devilContainer = document.querySelector(".party_devil_container");
 
 
-    // "assembling" effect
+    // "assembling"
+    // effect
     gsap.from(svgContent, {
         delay: -.5,
         duration: 2.5,
@@ -102,22 +103,23 @@ function devilAni() {
         repeat: -1,
         repeatDelay: 1.8,
         scrollTrigger: { trigger: devilContainer, markers: false, start: "top 80%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
-        y: () => Math.random() * 200 - 100,
-        x: () => Math.random() * 200 - 100,
+        y: () => Math.random() * 100 - 50,
+        x: () => Math.random() * 100 - 50,
     });
+
+    // "drawing effect"
+    // gsap.from(allContent, {
+    //     duration: .05,
+    //     opacity: 0,
+    //     stagger: .06,
+    //     yoyo: true,
+    //     repeat: -1,
+    //     repeatDelay: 1.8,
+    //     scrollTrigger: { trigger: devilContainer, markers: false, start: "top 40%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
+    //     y: () => Math.random() * 200 - 100,
+    //     x: () => Math.random() * 200 - 100,
+    // });
 }
-// "drawing effect"
-// gsap.from(allContent, {
-//     duration: .05,
-//     opacity: 0,
-//     stagger: .06,
-//     yoyo: true,
-//     repeat: -1,
-//     repeatDelay: 1.8,
-//     scrollTrigger: { trigger: devilContainer, markers: false, start: "top 40%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
-//     y: () => Math.random() * 200 - 100,
-//     x: () => Math.random() * 200 - 100,
-// });
 
 // "assembling" effect
 
@@ -127,10 +129,10 @@ function hogwartsAni() {
     const icons = document.querySelectorAll(".hogwarts_container *");
     const tl = gsap.timeline({ repeat: Infinity, yoyo: true, duration: 2, repeatDelay: 0, ease: "none", });
 
-    tl.from(icons, { opacity: .5, duration: 1, y: -20, stagger: { each: .2 }, ease: "back" });
-    tl.to(icons, { opacity: 1, duration: 1, y: 20, stagger: { each: -.2 }, ease: "back" });
-    tl.to(icons, { opacity: 1, duration: 1, y: 0, stagger: { each: .2 }, ease: "back" });
-    tl.to(icons, { opacity: .5, duration: 1, y: -20, stagger: { each: -.2 }, ease: "back" });
+    tl.from(icons, { opacity: .5, duration: 1, y: -20, stagger: { each: .2 }, ease: "none" });
+    tl.to(icons, { opacity: 1, duration: 1, y: 20, stagger: { each: .2 }, ease: "none" });
+    tl.to(icons, { opacity: 1, duration: 1, y: 0, stagger: { each: .2 }, ease: "none" });
+    tl.to(icons, { opacity: .5, duration: 1, y: -20, stagger: { each: .2 }, ease: "none" });
     // tl.fromTo(icons, { y: 0, duration: 1, stagger: { each: .5 } }, { y: -20, duration: 1, stagger: { each: .5 } })
     // tl.to(icons, { y: -20, duration: 1, stagger: { each: .5 } }, { y: 0, duration: 1, stagger: { each: .5 } })
 
