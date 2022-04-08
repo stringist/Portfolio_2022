@@ -289,7 +289,7 @@ header h1 {
     margin: 6rem auto 6rem auto;
     height: 2rem;
     width: 2rem;
-    background-image: url("./assets/down_arrow.svg");
+    background-image: url("./my_assets/down_arrow.svg");
     background-size: cover;
 }
 
@@ -428,15 +428,15 @@ section {
 }
 
 .card_1 {
-    background-image: url("./assets/card_1_grey.svg");
+    background-image: url("./my_assets/card_1_grey.svg");
 }
 
 .card_2 {
-    background-image: url("./assets/card_2_grey.svg");
+    background-image: url("./my_assets/card_2_grey.svg");
 }
 
 .card_3 {
-    background-image: url("./assets/card_3_grey.svg");
+    background-image: url("./my_assets/card_3_grey.svg");
 }
 
 
@@ -491,7 +491,7 @@ section {
 /* responsive project styling */
 
 .device_container {
-    background-image: url("./assets/screen_grey.svg");
+    background-image: url("./my_assets/screen_grey.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -513,7 +513,7 @@ section {
 
 .framework_graphic {
     height: 12rem;
-    background-image: url("./assets/stacks.svg");
+    background-image: url("./my_assets/stacks.svg");
     background-position: center;
 }
 

@@ -18,19 +18,19 @@ export function startAnimations() {
 
 function getSVGS() {
 
-    fetch("./assets/party_devil_sketch.svg")
+    fetch("./my_assets/party_devil_sketch.svg")
         .then((e) => e.text())
         .then((d) => {
             document.querySelector(".party_devil_container").insertAdjacentHTML("afterbegin", d);
             devilAni();
         });
-    // fetch("../assets/party_devil_left.svg")
+    // fetch("../my_assets/party_devil_left.svg")
     //     .then((e) => e.text())
     //     .then((d) => {
     //         document.querySelector(".party_devil_container").insertAdjacentHTML("afterbegin", d);
     //         devilAni();
     //     });
-    // fetch("../assets/party_devil_right.svg")
+    // fetch("../my_assets/party_devil_right.svg")
     //     .then((e) => e.text())
     //     .then((d) => {
     //         document.querySelector("..party_devil_container").insertAdjacentHTML("beforeend", d);
