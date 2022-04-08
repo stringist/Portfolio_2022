@@ -18,7 +18,7 @@ export function startAnimations() {
 
 function getSVGS() {
 
-    fetch("../assets/party_devil_sketch.svg")
+    fetch("./assets/party_devil_sketch.svg")
         .then((e) => e.text())
         .then((d) => {
             document.querySelector(".party_devil_container").insertAdjacentHTML("afterbegin", d);
