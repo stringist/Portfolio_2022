@@ -127,12 +127,18 @@ function devilAni() {
 
 function hogwartsAni() {
     const icons = document.querySelectorAll(".hogwarts_container *");
-    const tl = gsap.timeline({ repeat: Infinity, yoyo: true, duration: 2, repeatDelay: 0, ease: "none", });
+    // float effect
+    const tlIconBounce = gsap.timeline({ repeat: -1, repeatDelay: 0 });
 
-    tl.from(icons, { opacity: .5, duration: 1, y: -20, stagger: { each: .2 }, ease: "none" });
-    tl.to(icons, { opacity: 1, duration: 1, y: 20, stagger: { each: .2 }, ease: "none" });
-    tl.to(icons, { opacity: 1, duration: 1, y: 0, stagger: { each: .2 }, ease: "none" });
-    tl.to(icons, { opacity: .5, duration: 1, y: -20, stagger: { each: .2 }, ease: "none" });
+    tlIconBounce.
+    to(icons, { y: '-9', ease: "none", duration: 2, stagger: .5, delay: -2 }).
+    to(icons, { y: '+=9', ease: "none", duration: 2, stagger: .5, delay: -2 });
+    // ----------- wave effect ------------
+    // const tl = gsap.timeline({ repeat: Infinity, duration: 2, repeatDelay: 0, ease: "none", });
+    // tl.from(icons, { duration: .5, delay: -.5, y: -20, stagger: { each: .2 }, ease: "none" });
+    // tl.to(icons, { duration: .5, delay: -.5, y: 20, stagger: { each: .2 }, ease: "none" });
+    // tl.to(icons, { duration: .5, delay: -.5, y: 0, stagger: { each: .2 }, ease: "none" });
+    // tl.to(icons, { duration: .5, delay: -.5, y: -20, stagger: { each: .2 }, ease: "none" });
     // tl.fromTo(icons, { y: 0, duration: 1, stagger: { each: .5 } }, { y: -20, duration: 1, stagger: { each: .5 } })
     // tl.to(icons, { y: -20, duration: 1, stagger: { each: .5 } }, { y: 0, duration: 1, stagger: { each: .5 } })
 
