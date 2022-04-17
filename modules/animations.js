@@ -12,7 +12,6 @@ export function startAnimations() {
     getSVGS();
     hogwartsAni();
     gwcAni();
-    // devilAni();
 }
 // animations
 
@@ -23,6 +22,12 @@ function getSVGS() {
         .then((d) => {
             document.querySelector(".party_devil_container").insertAdjacentHTML("afterbegin", d);
             devilAni();
+        });
+    fetch("./my_assets/SVG/cube_city.svg")
+        .then((e) => e.text())
+        .then((d) => {
+            document.querySelector(".framework_graphic").insertAdjacentHTML("afterbegin", d);
+            frameworksAni();
         });
     // fetch("../my_assets/party_devil_left.svg")
     //     .then((e) => e.text())
@@ -153,4 +158,26 @@ function gwcAni() {
     const fadetl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
     fadetl.fromTo(logoStuff, { duration: .1, opacity: 0, stagger: { each: .1 } }, { duration: 2, opacity: .9, stagger: { each: .08, ease: "sine" } });
     fadetl.to(logoStuff, { delay: 3, opacity: 0, duration: 1.5 })
+}
+
+function frameworksAni() {
+
+    const container = document.querySelector("#framework");
+    const allContent = document.querySelectorAll(".framework_graphic svg *");
+
+    const tl = gsap.timeline({ repeat: -1, repeatDelay: -.2 });
+
+    tl.from(allContent, {
+        duration: .1,
+        opacity: .6,
+        stagger: .02,
+        yoyo: true,
+        repeat: 1,
+        repeatDelay: 1.8,
+        // scrollTrigger: { trigger: container, start: "top 40%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
+        y: () => Math.random() * 100 - 50,
+        x: () => Math.random() * 100 - 50,
+    });
+    // gsap.to(allContent, { opacity: 0 });
+    tl.to(allContent, { opacity: 0, duration: 2, delay: 0 });
 }
