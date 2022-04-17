@@ -320,7 +320,7 @@ header h1 {
     margin: 6rem auto 6rem auto;
     height: 2rem;
     width: 2rem;
-    background-image: url("./my_assets/down_arrow.svg");
+    background-image: url("../my_assets/down_arrow.svg");
     background-size: cover;
 }
 
@@ -459,15 +459,15 @@ section {
 }
 
 .card_1 {
-    background-image: url("./my_assets/card_1_grey.svg");
+    background-image: url("../my_assets/card_1_grey.svg");
 }
 
 .card_2 {
-    background-image: url("./my_assets/card_2_grey.svg");
+    background-image: url("../my_assets/card_2_grey.svg");
 }
 
 .card_3 {
-    background-image: url("./my_assets/card_3_grey.svg");
+    background-image: url("../my_assets/card_3_grey.svg");
 }
 
 
@@ -522,7 +522,7 @@ section {
 /* responsive project styling */
 
 .device_container {
-    background-image: url("./my_assets/screen_grey.svg");
+    background-image: url("../my_assets/screen_grey.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -544,7 +544,7 @@ section {
 
 .framework_graphic {
     height: 12rem;
-    background-image: url("./my_assets/stacks.svg");
+    background-image: url("../my_assets/stacks.svg");
     background-position: center;
 }
 
@@ -716,23 +716,23 @@ button:hover {
 }
 
 .m_blood {
-    background-image: url("./my_assets/muggle_blood_grey_1.svg ");
+    background-image: url("../my_assets/muggle_blood_grey_1.svg ");
 }
 
 .h_blood {
-    background-image: url("./my_assets/half_blood_grey_1.svg ");
+    background-image: url("../my_assets/half_blood_grey_1.svg ");
 }
 
 .f_blood {
-    background-image: url("./my_assets/full_blood_grey_1.svg ");
+    background-image: url("../my_assets/full_blood_grey_1.svg ");
 }
 
 .pref {
-    background-image: url("./my_assets/prefect_selected_grey_1.svg");
+    background-image: url("../my_assets/prefect_selected_grey_1.svg");
 }
 
 .squad {
-    background-image: url("./my_assets/squad_selected_grey_1.svg");
+    background-image: url("../my_assets/squad_selected_grey_1.svg");
 }
 
 .party_devil_container {

@@ -101,7 +101,7 @@ function devilAni() {
         stagger: .001,
         yoyo: true,
         repeat: -1,
-        repeatDelay: 1.8,
+        repeatDelay: 1.5,
         scrollTrigger: { trigger: devilContainer, markers: false, start: "top 80%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
         y: () => Math.random() * 100 - 50,
         x: () => Math.random() * 100 - 50,
