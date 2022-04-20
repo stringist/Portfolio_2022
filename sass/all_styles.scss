@@ -654,7 +654,8 @@ footer a {
 .detail_article h1 {
     line-height: 1.2;
     margin-bottom: 3rem;
-    font-size: 5.063rem;
+    font-size: 4.063rem;
+    max-width: 15ch;
 }
 
 .detail_article p {

@@ -40,19 +40,142 @@
 
             <p>The game as a whole was very inspired from my own background in and around the punk and metal music scenes, and I wanted to take the opportunity to create a soundtrack that reflected that. All of the sounds effects are recorded on guitar,
                 as well as the background music itself, which was heavily inspired by NPR, a local punk band from my hometown of Waco, TX. </p>
-            <a href=" https://stringist.github.io/12c.01.04.responsive-design/index_pico.html" class="arrow_link">Visit the page here &#x2794;</a>
         </div>
-        <!-- <div class="image_container"><img src="./my_assets/pico_mockup_desktop.png" alt="website mockup"></div> -->
+        <div class="image_container"><img src="./party_devil/assets/party_devil.svg" alt="Party Devil character"></div>
     </article>
-    <section>
-        <h3>Images</h3>
-        <div class="image_gallery">
+    <section id="embedded_game">
+        <div class="game_screen">
+            <div id="game" class="hidden">
+                <audio id="soundtrack" src="./sounds/soundtrack.mp3"></audio>
+                <audio id="click" src="./sounds/click.mp3"></audio>
+                <audio id="good_sound" src="./sounds/good_sound.mp3"></audio>
+                <audio id="bad_sound" src="./sounds/bad_sound.mp3"></audio>
+                <audio id="win" src="./sounds/level_complete_sound.mp3"></audio>
+                <audio id="lose" src="./sounds/lose.mp3"></audio>
+                <div id="game_background"></div>
+                <div id="back_container">
+                    <div id="skyline"></div>
+                </div>
+                <div id="game_sprites">
+                    <div id="wheel_container_1">
+                        <div id="wheel_1"></div>
+                    </div>
+                    <div id="wheel_container_2">
+                        <div id="wheel_2"></div>
+                    </div>
+                    <div id="devil_container">
+                        <div id="devil_sprite"></div>
+                    </div>
+                    <div id="container1">
+                        <div id="tallboy_sprite"></div>
+                    </div>
+                    <div id="container2">
+                        <div id="longneck_sprite"></div>
+                    </div>
+                    <div id="container3">
+                        <div id="pizza_sprite"></div>
+                    </div>
+                    <div id="container4">
+                        <div id="zero_sprite"></div>
+                    </div>
+                    <div id="container5">
+                        <div id="lite_sprite"></div>
+                    </div>
+                    <div id="container6">
+                        <div id="nun_sprite"></div>
+                    </div>
+                    <div id="container7">
+                        <div id="phone_sprite"></div>
+                    </div>
+                    <div id="container8">
+                        <div id="vinyl_sprite"></div>
+                    </div>
+                </div>
+                <div id="game_foreground"></div>
+                <div id="game_ui">
+                    <div id="time_board">
+                        <div id="timer"></div>
+                    </div>
+                    <div id="lives_container"></div>
+                    <div id="score_board">
+                        <span id="score_counter">0</span>
+                    </div>
+                    <div id="mute_container">
+                        <div id="mute_button"></div>
+                    </div>
+                </div>
 
-            <!-- <img src="./my_assets/pico_combined.png" alt="mobile and desktop view comparison"> -->
-
+                <div id="title_screen" class="hidden">
+                    <div id="play_button" class="button"></div>
+                    <div id="instructions_button" class="button"></div>
+                </div>
+                <div id="instructions1" class="hidden">
+                    <h1>Instructions</h1>
+                    <p>Party Devil's not a bad guy; he's just looking for a good time!</p>
+                    <p>He's cruising down to see a show, and wants to be in a proper party mood by the time he gets there...</p>
+                    <div id="down_arrow"></div>
+                </div>
+                <div id="instructions2" class="hidden">
+                    <div class="objects_container">
+                        <h2>Click on these goodies to gain points and get the party started!</h2>
+                        <figure>
+                            <img src="./party_devil/assets/tallboy.svg" alt="tallboy can" />
+                            <figcaption>Tallboy</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./party_devil/assets/longneck.svg" alt="longneck bottle" />
+                            <figcaption>Longneck</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./party_devil/assets/pizza.svg" alt="pizza slice" />
+                            <figcaption>'Za</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./party_devil/assets/LP.svg" alt="Vinyl record" />
+                            <figcaption>Heavy metal record</figcaption>
+                        </figure>
+                    </div>
+                    <div class="objects_container">
+                        <h2>Watch out for these! They will totally kill your vibe and cause you to lose health!</h2>
+                        <figure>
+                            <img src="./party_devil/assets/00.svg" alt="Alcohol-free" />
+                            <figcaption>Zero procent</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./party_devil/assets/lite.svg" alt="Light beer" />
+                            <figcaption>Light one</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./party_devil/assets/nun.svg" alt="Nun" />
+                            <figcaption>Sister McCreary</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./party_devil/assets/phone.svg" alt="Phone call" />
+                            <figcaption>Facetime from Mom</figcaption>
+                        </figure>
+                    </div>
+                    <div id="double">
+                        <h2 id="offset">Try to to get 500 points before time runs out!</h2>
+                        <div id="start_game_button" class="button"></div>
+                    </div>
+                </div>
+                <div id="game_over" class="hidden">
+                    <h1>Bummer!</h1>
+                    <p>You're at the show and you're not even having a good time. Drinks are $20 and there's no re-entry.</p>
+                    <p>Tonight is going to be totally lame!</p>
+                    <div id="try_again" class="button"></div>
+                </div>
+                <div id="level_complete" class="hidden">
+                    <h1>Hell yeah!</h1>
+                    <p>Party in the house! You made it to the show and you're on your level.</p>
+                    <p>It's gonna be a good night!</p>
+                    <div id="play_again" class="button"></div>
+                </div>
+            </div>
         </div>
     </section>
 </body>
+<script type="module" src="./party_devil/main.js"></script>
 <script type="module" src="./main.js"></script>
 
 </html>
