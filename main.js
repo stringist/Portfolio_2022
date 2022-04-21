@@ -1,5 +1,5 @@
-import './sass/all_styles.scss';
 import './party_devil/party_devil.scss';
+import './sass/all_styles.scss';
 // import './sass/style.scss';
 import { startAnimations } from './modules/animations.js'
 
