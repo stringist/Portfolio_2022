@@ -663,6 +663,12 @@ footer a {
     margin-bottom: 3rem;
 }
 
+#PD_detail img {
+    max-height: 50vw;
+    // border: $test;
+    // background-size: cover;
+}
+
 .image_gallery {
     display: flex;
     flex-wrap: wrap;
