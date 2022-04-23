@@ -664,7 +664,7 @@ footer a {
 }
 
 #PD_detail img {
-    max-height: 50vw;
+    max-height: 40vw;
     // border: $test;
     // background-size: cover;
 }
@@ -677,11 +677,24 @@ footer a {
     margin-top: 3rem;
 }
 
-img {
-    width: 100%;
-    height: auto;
+.half_and_half {
+    display: flex;
+    // flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
 }
 
+.half_and_half img {
+    margin: 0 0 8vw 0;
+    width: 49%;
+    // min-width: 20rem;
+    // display: flex;
+}
+
+// img {
+//     width: 100%;
+//     height: auto;
+// }
 .fullpage_container {
     display: flex;
     gap: 3rem;
