@@ -643,13 +643,13 @@ footer a {
 /* ------------- individual project pages styling ------------------- */
 
 .detail_section {
-    margin-top: 6vw;
+    margin-top: 8vw;
     margin-bottom: 6vw;
 }
 
 .detail_section h1 {
     margin-left: 4vw;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     max-width: 13ch;
     font-size: 4rem;
     line-height: 5rem;
@@ -658,7 +658,7 @@ footer a {
 .detail_article {
     display: grid;
     // place-items: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 60% 40%;
     margin: 0vw 4vw 0 4vw;
 }
 
