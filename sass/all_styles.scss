@@ -650,6 +650,9 @@ footer a {
 .detail_section h1 {
     margin-left: 4vw;
     margin-bottom: 3rem;
+    max-width: 13ch;
+    font-size: 4rem;
+    line-height: 5rem;
 }
 
 .detail_article {
@@ -657,6 +660,10 @@ footer a {
     // place-items: center;
     grid-template-columns: 1fr 1fr;
     margin: 0vw 4vw;
+}
+
+.detail_article r.text {
+    grid-column: 1/2;
 }
 
 .detail_article p {
@@ -668,6 +675,11 @@ footer a {
     width: 90%;
     margin: 0 auto 0 auto;
     height: auto;
+}
+
+#PD_detail_img {
+    width: auto;
+    height: 30vw;
 }
 
 button:hover {
