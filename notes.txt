@@ -9,5 +9,47 @@ SASS structure:
     _main.sass — the main partial should contain only the imports of the already mentioned files
 
 TO DO
-make scrolling smooth
-chage bouncing arrow to event listener-triggered scroll
+DONE ~make scrolling smooth~ 
+DONE change bouncing arrow to event listener-triggered scroll 
+
+Add Advice project page
+
+Add subpage content for:
+
+Hogwarts
+--codepen - generic functions, pureblood algorithm
+--screenshot
+
+Advice
+--landing page mockup
+--results console 
+--leaf icon
+--leave techinical info til Paula's done 
+--talk about streamlining information and breaking up into sections
+--general explanation of page
+--windmill ani with plain lines
+
+Other/miscellaneous 
+--what to animate for this?? vases & wine glasses, rolling transparency
+--glass portfolio
+--card gallery -3 wide
+--collage
+--music
+    --link to bandcamp & that blue picture
+
+Design for Developers
+--move to bottom ish
+what to animate???
+--update description
+
+Seperate about page with image
+--find image
+--rewrite text
+
+
+___________________
+
+Make responsive 
+Dark mode 
+
+
