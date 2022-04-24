@@ -642,23 +642,58 @@ footer a {
 
 /* ------------- individual project pages styling ------------------- */
 
+.bio_section {
+    margin-top: 8vw;
+    margin-bottom: 6vw;
+}
+
+.bio_article h1 {
+    max-width: 13ch;
+    font-size: 4rem;
+    line-height: 5rem;
+    margin-bottom: 2rem;
+}
+
+.bio_article {
+    display: grid;
+    // place-items: center;
+    grid-template-columns: 55% 45%;
+    margin: 0vw 4vw 0 4vw;
+}
+
+.bio_text {
+    // display: none;
+    grid-column: 1/2;
+}
+
+.bio_article p {
+    padding-right: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.bio_image {
+    margin: 0 auto 0 auto;
+    width: 90%;
+    min-width: 90%;
+    height: auto;
+}
+
 .detail_section {
     margin-top: 8vw;
     margin-bottom: 6vw;
 }
 
-.detail_section h1 {
-    margin-left: 4vw;
-    margin-bottom: 4rem;
+.detail_article h1 {
     max-width: 13ch;
     font-size: 4rem;
     line-height: 5rem;
+    margin-bottom: 2rem;
 }
 
 .detail_article {
     display: grid;
     // place-items: center;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 55% 45%;
     margin: 0vw 4vw 0 4vw;
 }
 
@@ -668,7 +703,7 @@ footer a {
 }
 
 .detail_article p {
-    padding-right: 1.5rem;
+    padding-right: 3rem;
     margin-bottom: 1.5rem;
 }
 
