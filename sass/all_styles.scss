@@ -55,6 +55,7 @@ h5 {
 h1 {
     /* /* margin-top: 0; */
     font-size: 7.594rem;
+    font-size: 5.063rem;
 }
 
 h2 {
@@ -640,6 +641,31 @@ footer a {
 
 
 /* individual project pages styling  */
+
+.detail_section {
+    margin-top: 6vw;
+    margin-bottom: 6vw;
+}
+
+.bio {
+    // margin-top: 8vw;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    place-items: center;
+    grid-gap: 4rem;
+}
+
+.bio p {
+    margin-bottom: 1rem;
+    // padding-right: 20%;
+}
+
+.bio img {
+    width: 30vw;
+    height: auto;
+    grid-column: 2/3;
+    grid-row: 2/-1;
+}
 
 .detail_article {
     display: flex;
