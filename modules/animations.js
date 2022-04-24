@@ -106,7 +106,7 @@ function devilAni() {
         stagger: .001,
         yoyo: true,
         repeat: -1,
-        repeatDelay: 1.5,
+        repeatDelay: 1.2,
         scrollTrigger: { trigger: devilContainer, markers: false, start: "top 80%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
         y: () => Math.random() * 100 - 50,
         x: () => Math.random() * 100 - 50,
@@ -138,18 +138,6 @@ function hogwartsAni() {
     tlIconBounce.
     to(icons, { y: '-9', ease: "none", duration: 2, stagger: .5, delay: -2 }).
     to(icons, { y: '+=9', ease: "none", duration: 2, stagger: .5, delay: -2 });
-    // ----------- wave effect ------------
-    // const tl = gsap.timeline({ repeat: Infinity, duration: 2, repeatDelay: 0, ease: "none", });
-    // tl.from(icons, { duration: .5, delay: -.5, y: -20, stagger: { each: .2 }, ease: "none" });
-    // tl.to(icons, { duration: .5, delay: -.5, y: 20, stagger: { each: .2 }, ease: "none" });
-    // tl.to(icons, { duration: .5, delay: -.5, y: 0, stagger: { each: .2 }, ease: "none" });
-    // tl.to(icons, { duration: .5, delay: -.5, y: -20, stagger: { each: .2 }, ease: "none" });
-    // tl.fromTo(icons, { y: 0, duration: 1, stagger: { each: .5 } }, { y: -20, duration: 1, stagger: { each: .5 } })
-    // tl.to(icons, { y: -20, duration: 1, stagger: { each: .5 } }, { y: 0, duration: 1, stagger: { each: .5 } })
-
-
-
-    // tl.fromTo(icons, { opacity: 1, y: -20, stagger: { each: -.2 }, ease: "back" }, { opacity: .6, y: 0, stagger: { each: -.2 }, ease: "back" })
 }
 
 function gwcAni() {

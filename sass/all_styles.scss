@@ -684,7 +684,7 @@ footer a {
 }
 
 .detail_article h1 {
-    max-width: 13ch;
+    // max-width: 13ch;
     font-size: 4rem;
     line-height: 5rem;
     margin-bottom: 2rem;
@@ -692,8 +692,8 @@ footer a {
 
 .detail_article {
     display: grid;
-    // place-items: center;
-    grid-template-columns: 55% 45%;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
     margin: 0vw 4vw 0 4vw;
 }
 
