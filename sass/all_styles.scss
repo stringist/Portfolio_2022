@@ -659,10 +659,11 @@ footer a {
     display: grid;
     // place-items: center;
     grid-template-columns: 1fr 1fr;
-    margin: 0vw 4vw;
+    margin: 0vw 4vw 0 4vw;
 }
 
-.detail_article r.text {
+.detail_text {
+    // display: none;
     grid-column: 1/2;
 }
 
@@ -672,9 +673,16 @@ footer a {
 }
 
 .detail_image {
-    width: 90%;
     margin: 0 auto 0 auto;
+    width: 90%;
+    min-width: 90%;
     height: auto;
+}
+
+.detail_img_stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 #PD_detail_img {
