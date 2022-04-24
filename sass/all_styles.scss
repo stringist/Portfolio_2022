@@ -803,6 +803,128 @@ button:hover {
     filter: opacity(.85)
 }
 
+// -----------------windmill styling ---------------------------//
+.absolute_container {
+    // border: solid 1px orange;
+    height: 100vh;
+    width: 99vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.windmills_container {
+    display: flex;
+    // justify-content: space-between;
+    position: relative;
+    height: 100vh;
+    width: 50vw;
+    bottom: 0vw;
+    right: -32vw;
+    // border: $test;
+    align-items: flex-end;
+}
+
+.blades,
+.post {
+    // border: $test;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    // position: absolute;
+}
+
+.blades {
+    background-image: url("../assets/SVG/blades_1_2.svg");
+    position: relative;
+}
+
+// .mill_left {}
+// .mill_middle {
+//     margin-left: 1vw;
+// }
+.mill_right {
+    margin-left: 3vw;
+}
+
+.mill_left :first-child {
+    width: 25vw;
+    height: 25vw;
+    top: 14vw;
+    right: 0.48vw;
+}
+
+.mill_middle :first-child {
+    transform: rotate(60deg);
+    width: 20vw;
+    height: 20vw;
+    top: 11.1vw;
+    right: 0.3vw;
+}
+
+.mill_right :first-child {
+    transform: rotate(30deg);
+    width: 15vw;
+    height: 15vw;
+    top: 8.4vw;
+    right: 0.2vw;
+}
+
+.mill_left :last-child {
+    // width: 25vw;
+    height: 32vw;
+}
+
+.mill_middle :last-child {
+    // width: 20vw;
+    height: 25vw;
+}
+
+.mill_right :last-child {
+    // width: 18vw;
+    height: 19vw;
+}
+
+.post {
+    background-image: url("../assets/SVG/post_1.svg");
+}
+
+.rotate_1 {
+    overflow: visible;
+    animation: slowRoll_1 60s linear infinite;
+}
+
+@keyframes slowRoll_1 {
+    to {
+        transform-origin: center center;
+        transform: rotate(360deg);
+    }
+}
+
+.rotate_2 {
+    overflow: visible;
+    animation: slowRoll_2 60s linear infinite;
+}
+
+@keyframes slowRoll_2 {
+    to {
+        transform-origin: center center;
+        transform: rotate(420deg);
+    }
+}
+
+.rotate_3 {
+    overflow: visible;
+    animation: slowRoll_3 60s linear infinite;
+}
+
+@keyframes slowRoll_3 {
+    to {
+        transform-origin: center center;
+        transform: rotate(390deg);
+    }
+}
+
 // ------------------- old subpage styling ----------------------//
 // .detail_section {
 //     margin-top: 6vw;
