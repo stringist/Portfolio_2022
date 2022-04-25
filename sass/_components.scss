@@ -92,6 +92,7 @@
     margin-left: 4vw;
     margin-right: 4vw;
     display: grid;
+    grid-template-columns: 1fr 1fr;
     place-items: center;
     margin-bottom: 10rem;
     h1 {
