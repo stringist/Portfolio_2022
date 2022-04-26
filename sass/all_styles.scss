@@ -345,6 +345,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 2fr;
     height: 12rem;
+    margin-bottom: 6rem;
 }
 
 .links_list {
@@ -810,22 +811,22 @@ button:hover {
 // -----------------windmill styling ---------------------------//
 .absolute_container {
     // border: solid 1px orange;
-    height: 100vh;
-    width: 99vw;
+    height: 20rem;
+    width: 100vw;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 60rem;
+    right: 0;
 }
 
 .windmills_container {
     display: flex;
-    // justify-content: space-between;
+    justify-content: space-between;
     position: relative;
-    height: 100vh;
+    height: 20rem;
     width: 50vw;
     bottom: 0vw;
-    right: -32vw;
-    // border: $test;
+    right: -39vw;
+    border-bottom: $grey_border;
     align-items: flex-end;
 }
 
@@ -839,58 +840,58 @@ button:hover {
 }
 
 .blades {
-    background-image: url("../assets/SVG/blades_1_2.svg");
+    background-image: url("../my_assets/advice/SVG/blades_outline.svg");
     position: relative;
 }
 
-// .mill_left {}
-// .mill_middle {
-//     margin-left: 1vw;
-// }
 .mill_right {
-    margin-left: 3vw;
+    // margin-left: 3vw;
 }
 
 .mill_left :first-child {
-    width: 25vw;
-    height: 25vw;
-    top: 14vw;
-    right: 0.48vw;
+    // border: red solid 1px;
+    width: 20vw;
+    height: 20vw;
+    top: 11vw;
+    right: 0.2vw;
 }
 
 .mill_middle :first-child {
+    // border: red solid 1px;
     transform: rotate(60deg);
-    width: 20vw;
-    height: 20vw;
-    top: 11.1vw;
+    width: 18vw;
+    height: 18vw;
+    top: 10.1vw;
     right: 0.3vw;
 }
 
 .mill_right :first-child {
+    // border: red solid 1px;
+    // width: calc(100%/3);
     transform: rotate(30deg);
-    width: 15vw;
-    height: 15vw;
-    top: 8.4vw;
+    width: 16vw;
+    height: 16vw;
+    top: 8.9vw;
     right: 0.2vw;
 }
 
 .mill_left :last-child {
     // width: 25vw;
-    height: 32vw;
+    height: 20vw;
 }
 
 .mill_middle :last-child {
     // width: 20vw;
-    height: 25vw;
+    height: 18vw;
 }
 
 .mill_right :last-child {
     // width: 18vw;
-    height: 19vw;
+    height: 16vw;
 }
 
 .post {
-    background-image: url("../assets/SVG/post_1.svg");
+    background-image: url("../my_assets/advice/SVG/post_outline.svg");
 }
 
 .rotate_1 {
