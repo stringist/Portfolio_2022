@@ -306,16 +306,21 @@ header h1 {
     font-size: 9vw;
 }
 
-.spacer_text p {
-    margin-left: 3rem;
-    line-height: 1.3rem;
-    font-weight: 100;
-    vertical-align: middle;
+.spacer_text {
+    display: grid;
+    place-items: center;
 }
 
-.spacer_text :first-child {
+.two_line_container {
+    margin: auto;
+}
+
+.two_line_container p {
+    margin-bottom: 0;
+}
+
+.two_line_container :first-child {
     font-weight: 600;
-    padding-top: 1rem;
 }
 
 .arrow_container {
@@ -329,7 +334,7 @@ header h1 {
 section {
     margin-left: 4vw;
     margin-right: 4vw;
-    scroll-margin-top: 6rem;
+    scroll-margin-top: 4rem;
     /* margin-bottom: 22vw; */
 }
 
@@ -922,6 +927,10 @@ button:hover {
         transform-origin: center center;
         transform: rotate(390deg);
     }
+}
+
+.spacer_bottom_R>p {
+    margin-bottom: 0;
 }
 
 // ------------------- old subpage styling ----------------------//
