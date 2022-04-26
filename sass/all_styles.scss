@@ -345,7 +345,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 2fr;
     height: 12rem;
-    margin-bottom: 6rem;
+    margin-bottom: 10rem;
 }
 
 .links_list {
@@ -814,7 +814,7 @@ button:hover {
     height: 20rem;
     width: 100vw;
     position: absolute;
-    top: 60rem;
+    top: 64rem;
     right: 0;
 }
 
@@ -826,7 +826,6 @@ button:hover {
     width: 50vw;
     bottom: 0vw;
     right: -39vw;
-    border-bottom: $grey_border;
     align-items: flex-end;
 }
 
@@ -844,10 +843,9 @@ button:hover {
     position: relative;
 }
 
-.mill_right {
-    // margin-left: 3vw;
-}
-
+// .mill_right {
+//     margin-left: 3vw;
+// }
 .mill_left :first-child {
     // border: red solid 1px;
     width: 20vw;
