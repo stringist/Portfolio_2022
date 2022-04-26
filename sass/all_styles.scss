@@ -816,6 +816,7 @@ button:hover {
     position: absolute;
     top: 64rem;
     right: 0;
+    z-index: -1;
 }
 
 .windmills_container {
@@ -841,6 +842,10 @@ button:hover {
 .blades {
     background-image: url("../my_assets/advice/SVG/blades_outline.svg");
     position: relative;
+}
+
+.post {
+    background-image: url("../my_assets/advice/SVG/post_outline.svg");
 }
 
 // .mill_right {
@@ -886,10 +891,6 @@ button:hover {
 .mill_right :last-child {
     // width: 18vw;
     height: 16vw;
-}
-
-.post {
-    background-image: url("../my_assets/advice/SVG/post_outline.svg");
 }
 
 .rotate_1 {
