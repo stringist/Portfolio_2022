@@ -150,7 +150,7 @@ function gwcAni() {
 
 function frameworksAni() {
 
-    const container = document.querySelector("#framework");
+    // const container = document.querySelector("#framework");
     const allContent = document.querySelectorAll(".framework_graphic svg *");
 
     const tl = gsap.timeline({ repeat: -1, repeatDelay: -.2 });
@@ -162,10 +162,9 @@ function frameworksAni() {
         yoyo: true,
         repeat: 1,
         repeatDelay: 1.8,
-        // scrollTrigger: { trigger: container, start: "top 40%", end: "bottom 50%", toggleActions: "play reverse restart reverse" },
         y: () => Math.random() * 100 - 50,
         x: () => Math.random() * 100 - 50,
     });
-    // gsap.to(allContent, { opacity: 0 });
+
     tl.to(allContent, { opacity: 0, duration: 2, delay: 0 });
 }
