@@ -9,4 +9,15 @@ window.addEventListener("DOMContentLoaded", start);
 function start() {
     console.log("ready");
     startAnimations();
+    topFunction();
+}
+
+function topFunction() {
+    const bttButton = document.querySelector(".back_to_top");
+    bttButton.addEventListener("click", scrollToTop);
+
+    function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 }
