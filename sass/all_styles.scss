@@ -602,6 +602,8 @@ section {
 textarea {
     resize: none;
     height: 10rem;
+    padding: .5rem;
+    max-width: calc(100% - 1rem);
 }
 
 #name,
