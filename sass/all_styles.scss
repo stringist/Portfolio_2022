@@ -473,7 +473,6 @@
         /* fonts & ui cards styling */
         
         .card_text {
-            grid-column: 1/2;
             padding-right: 3rem;
             @media screen and (max-width: 850px) {
                 grid-column: 1/2;
