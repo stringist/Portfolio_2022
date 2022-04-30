@@ -550,11 +550,6 @@ section {
     align-items: center;
 }
 
-.framework_graphic {
-    // background-image: url("../my_assets/cube_city.svg");
-    // background-position: center;
-}
-
 .framework_graphic svg {
     overflow: visible;
     margin: auto;
@@ -571,6 +566,7 @@ section {
 
 #contact_form {
     margin-top: 2rem;
+    margin-bottom: 10vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
@@ -584,7 +580,7 @@ section {
 #email {
     font-size: 1rem;
     padding: .5rem;
-    width: calc(100% - 1rem);
+    width: calc(100% - (1rem + 2px));
 }
 
 #name_group {
@@ -603,7 +599,7 @@ textarea {
     resize: none;
     height: 10rem;
     padding: .5rem;
-    max-width: calc(100% - 1rem);
+    max-width: calc(100% - (1rem + 2px));
 }
 
 #name,
@@ -630,6 +626,22 @@ textarea {
         font-size: 1rem;
         border: none;
         color: var(--primary-light);
+        &:hover {
+            transition: all 0.3s;
+            transform: translate(-3px, -3px);
+            background: #ffffff;
+            // font-size: 1.05rem;
+            border: 1px solid $grey;
+            color: $grey;
+            box-shadow: 2.5px 2.5px 0px $grey;
+            transform: scale();
+        }
+        &:active {
+            background-color: $grey;
+            height: 3rem;
+            border: none;
+            color: var(--primary-light);
+        }
     }
 }
 
