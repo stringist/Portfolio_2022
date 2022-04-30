@@ -20,13 +20,13 @@ $test: solid 1px deeppink;
 html {
     scroll-behavior: smooth;
     font-size: 112.5%;
+    box-sizing: border-box;
 }
 
 
 /*18px*/
 
 body {
-    box-sizing: border-box;
     background-color: var(--primary-light);
     color: $grey;
     font-family: var(--body);
@@ -411,7 +411,7 @@ section {
 
 #projects article {
     margin-top: 6rem;
-    margin-bottom: 12vw;
+    margin-bottom: 12rem;
     min-height: 12rem;
     display: grid;
     align-items: center;
@@ -583,9 +583,8 @@ section {
 #name,
 #email {
     font-size: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    /* padding-left: .5rem; */
+    padding: .5rem;
+    width: calc(100% - 1rem);
 }
 
 #name_group {
@@ -633,12 +632,16 @@ textarea {
 }
 
 footer {
-    padding: 1rem;
+    background: #cbcbcb4e;
     border-top: $grey_border;
     margin-top: 3rem;
-    font-size: 0.8rem;
-    color: #888;
-    width: 100%;
+    font-size: .8rem;
+    color: #444;
+    // width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 5vw;
 }
 
 footer a {
@@ -937,6 +940,20 @@ button:hover {
 .note {
     font-weight: 100;
     font-size: .8rem;
+}
+
+.contact_info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.contact_info>* {
+    margin: 0;
+}
+
+.contact_info:first-child {
+    margin-bottom: 1rem;
 }
 
 // ------------------- old subpage styling ----------------------//
