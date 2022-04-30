@@ -506,11 +506,15 @@
         //     border: solid 1px aqua;
         // }
         .card_container {
-            width: 22vw;
-            height: 32vw;
+            width: 18vw;
+            height: 27vw;
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @media screen and (max-width: 850px) {
+                width: 22vw;
+                height: 32vw;
+            }
         }
         
         .card_1 {
