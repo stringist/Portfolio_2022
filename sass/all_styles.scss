@@ -31,7 +31,6 @@
                 font-weight: 400;
                 line-height: 1.5;
                 overflow-x: hidden;
-                height: 100%;
             }
             
             h1,
@@ -749,7 +748,7 @@
             }
             
             footer {
-                position: fixed;
+                // position: absolute;
                 bottom: 0;
                 width: 100%;
                 background: #cbcbcb4e;
@@ -1078,4 +1077,10 @@
             
             .hidden {
                 display: none;
+            }
+            
+            .go_back {
+                margin-top: -4rem;
+                margin-left: -1rem;
+                fill: #505050;
             }
