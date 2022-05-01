@@ -114,7 +114,9 @@
                 display: flex;
                 height: 3rem;
                 align-items: center;
-                /* border: solid 1px blue; */
+                @media screen and (max-width: 850px) {
+                    display: none;
+                }
             }
             
             .nav_box {
@@ -726,6 +728,9 @@
             .bio_section {
                 margin-top: 8vw;
                 margin-bottom: 6vw;
+                @media screen and (max-width: 850px) {
+                    margin-top: 6rem;
+                }
             }
             
             .bio_article h1 {
@@ -733,6 +738,10 @@
                 font-size: 4rem;
                 line-height: 5rem;
                 margin-bottom: 2rem;
+                @media screen and (max-width: 850px) {
+                    // line-height: 4rem;
+                    margin-bottom: 1rem;
+                }
             }
             
             .bio_article {
@@ -740,6 +749,10 @@
                 // place-items: center;
                 grid-template-columns: 55% 45%;
                 margin: 0vw 4vw 0 4vw;
+                @media screen and (max-width: 850px) {
+                    display: flex;
+                    flex-direction: column;
+                }
             }
             
             .bio_text {
@@ -752,16 +765,23 @@
                 margin-bottom: 1.5rem;
             }
             
-            .bio_image {
-                margin: 0 auto 0 auto;
-                width: 90%;
-                min-width: 90%;
-                height: auto;
-            }
-            
             .detail_section {
                 margin-top: 12vw;
+                @media screen and (max-width: 850px) {
+                    margin-top: 8rem;
+                }
                 margin-bottom: 6vw;
+            }
+            
+            .headshot {
+                width: 90%;
+                height: auto;
+                margin: 0 auto auto auto;
+                @media screen and (max-width: 850px) {
+                    width: 100%;
+                    order: -1;
+                    margin-bottom: 2rem;
+                }
             }
             
             button:hover {
@@ -779,12 +799,6 @@
                     margin-top: 1rem;
                     margin-bottom: 1rem;
                 }
-            }
-            
-            .headshot {
-                width: 90%;
-                height: auto;
-                margin: 0 auto auto auto;
             }
             
             .hogwarts_graphic {
@@ -806,11 +820,15 @@
             
             .hp {
                 filter: opacity(.9);
-                height: 100px;
-                width: 100px;
+                height: 10vw;
+                width: 10vw;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
+                @media screen and (max-width: 850px) {
+                    height: 15vw;
+                    width: 15vw;
+                }
             }
             
             .m_blood {
