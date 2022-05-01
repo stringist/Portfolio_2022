@@ -25,6 +25,7 @@
             /*18px*/
             
             body {
+                min-height: 100%;
                 background-color: var(--primary-light);
                 color: $grey;
                 font-family: var(--body);
@@ -748,8 +749,6 @@
             }
             
             footer {
-                // position: absolute;
-                bottom: 0;
                 width: 100%;
                 background: #cbcbcb4e;
                 border-top: $grey_border;
