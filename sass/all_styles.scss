@@ -675,7 +675,7 @@
             #email {
                 font-size: 1rem;
                 padding: .5rem;
-                width: calc(100% - (1rem + 2px));
+                // width: calc(100% - (1rem + 2px));
             }
             
             #name_group {
@@ -694,7 +694,7 @@
                 resize: none;
                 height: 10rem;
                 padding: .5rem;
-                max-width: calc(100% - (1rem + 2px));
+                // max-width: calc(100% - (1rem + 2px));
             }
             
             #name,
@@ -843,7 +843,7 @@
                 justify-content: space-evenly;
                 @media screen and (max-width: 850px) {
                     margin-top: 2rem;
-                    order: 1;
+                    // order: 1;
                 }
             }
             
