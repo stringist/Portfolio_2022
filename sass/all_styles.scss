@@ -15,12 +15,12 @@
             * {
                 margin: 0;
                 padding: 0;
+                box-sizing: border-box;
             }
             
             html {
                 scroll-behavior: smooth;
                 font-size: 112.5%;
-                box-sizing: border-box;
             }
             /*18px*/
             
@@ -384,7 +384,8 @@
                 grid-template-columns: 1fr 2fr;
                 height: 12rem;
                 margin-bottom: 10rem;
-                @media screen and (max-width: 850px) {
+                @media screen and (max-width: 900px) {
+                    border-left: $grey_border;
                     grid-template-columns: 1fr;
                     margin-bottom: 6rem;
                 }
@@ -395,7 +396,7 @@
                 border-right: $grey_border;
                 border-left: $grey_border;
                 border-bottom: $grey_border;
-                @media screen and (max-width: 800px) {
+                @media screen and (max-width: 900px) {
                     display: none;
                 }
             }
@@ -415,7 +416,17 @@
                     // font-size: 1rem;
                     font-size: 112.5%;
                     font-weight: 400;
+                    &:hover {
+                        background-color: $grey;
+                        color: #fff;
+                        transition: all .3s;
+                    }
                     a {
+                        // padding-top: .8rem;
+                        // padding-bottom: .8rem;
+                        // padding-right: 12rem;
+                        // padding-left: 1rem;
+                        // margin-left: -1rem;
                         color: $grey;
                     }
                 }
@@ -446,13 +457,10 @@
                 align-items: center;
                 @media screen and (max-width: 800px) {
                     grid-columns: 1/-1;
-                    border-left: $grey_border;
                 }
             }
             
             .projects_header h2 {
-                /* margin: auto; */
-                /* height: 12rem; */
                 width: 100%;
                 grid-column: 2/3;
                 text-align: center;
@@ -471,8 +479,17 @@
                 }
             }
             
+            #advisor,
+            #party_devil,
+            #design_4_devs,
+            #hogwarts,
+            #misc {
+                scroll-margin-top: 6rem;
+            }
+            
             .project_text {
-                margin-left: 1vw;
+                margin: auto;
+                // margin-left: 1vw;
             }
             
             .project_text h3 {
@@ -496,7 +513,7 @@
             }
             
             .cards_graphic {
-                grid-column: 2/4;
+                // grid-column: 2/4;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -508,6 +525,11 @@
                     margin-top: 2rem;
                 }
                 /* border: solid 1px pink; */
+            }
+            
+            .d4d_ani,
+            .responsive {
+                grid-column: 2/4;
             }
             
             // .odd .card_text {
@@ -603,14 +625,17 @@
                 border: none;
             }
             
-            #framework {
-                align-items: center;
+            .framework_graphic {
+                width: 85%;
+                margin: auto;
+                grid-column: 1/3;
             }
             
             .framework_graphic svg {
                 overflow: visible;
                 margin: auto;
-                width: 55vw;
+                // padding-right: 4rem;
+                // padding-left: 4rem;
                 height: auto;
             }
             /* contact form styling */
