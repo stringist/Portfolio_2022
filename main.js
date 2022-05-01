@@ -7,7 +7,11 @@ import { startAnimations } from './modules/animations.js'
 window.addEventListener("DOMContentLoaded", start);
 
 function start() {
+    // const mediaQuery = window.matchMedia('(min-width: 750px)');
     console.log("ready");
+    // if (mediaQuery.matches) {
+    //     startAnimations();
+    // }
     startAnimations();
     topFunction();
 }
