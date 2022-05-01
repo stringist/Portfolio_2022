@@ -479,6 +479,13 @@
                 }
             }
             
+            #advisor {
+                @media screen and (max-width: 850px) {
+                    padding-top: 12rem;
+                    margin-bottom: -12rem;
+                }
+            }
+            
             #advisor,
             #party_devil,
             #design_4_devs,
@@ -924,9 +931,13 @@
                 top: 64rem;
                 right: 0;
                 z-index: -1;
+                @media screen and (max-width: 850px) {
+                    top: 50rem;
+                }
             }
             
             .windmills_container {
+                // border: $test;
                 display: flex;
                 justify-content: space-between;
                 position: relative;
@@ -935,6 +946,12 @@
                 bottom: 0vw;
                 right: -39vw;
                 align-items: flex-end;
+                @media screen and (max-width: 850px) {
+                    height: 22rem;
+                    width: 74vw;
+                    bottom: 0vw;
+                    right: -14vw;
+                }
             }
             
             .blades,
