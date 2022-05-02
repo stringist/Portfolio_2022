@@ -1085,11 +1085,13 @@
             }
             
             .copy_email {
+                filter: opacity(.5);
                 cursor: pointer;
                 display: grid;
                 padding: .25rem;
                 margin-left: -.5rem;
                 &:hover {
+                    filter: opacity(1);
                     transition: all .3s;
                     transform: translate(-3px, -3px);
                     background: #ffffff;
