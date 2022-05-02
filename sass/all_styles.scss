@@ -1151,6 +1151,11 @@
                 text-decoration: none;
                 color: $grey;
                 margin-bottom: 1rem;
+                &:hover {
+                    transform: scale(1.02);
+                    filter: brightness(1.15);
+                    transition: all .3s;
+                }
                 @media screen and (max-width: 880px) {
                     height: 600px;
                 }
@@ -1203,4 +1208,8 @@
             figcaption {
                 filter: opacity(.5);
                 font-size: .8rem;
+            }
+            
+            .blurb {
+                margin: auto 4vw;
             }
