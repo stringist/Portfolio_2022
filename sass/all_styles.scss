@@ -1134,46 +1134,73 @@
             }
             
             // ------ img gallery ---------
+            .thumbs_gallery {
+                display: grid;
+                margin: 2rem 4vw;
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+                grid-gap: 2rem;
+                justify-items: center;
+                @media screen and (max-width: 880px) {
+                    grid-gap: 4rem;
+                }
+            }
+            
+            .thumb {
+                min-width: 100%;
+                height: 360px;
+                text-decoration: none;
+                color: $grey;
+                margin-bottom: 1rem;
+                @media screen and (max-width: 880px) {
+                    height: 600px;
+                }
+            }
+            
             .thumb figure {
-                border: $test;
-                width: 500px;
-                height: 500px;
+                // border: $test;
+                width: 100%;
+                height: 100%;
                 background-position: center;
                 background-size: cover;
             }
             
             .thumb_1 {
-                background-image: url("../my_assets/misc/thumbs/rainbow_bowl.webp");
-            }
-            
-            .thumb_2 {
                 background-image: url("../my_assets/misc/thumbs/blue_wave_tumblers.webp");
             }
             
-            .thumb_3 {
+            .thumb_2 {
                 background-image: url("../my_assets/misc/thumbs/decanter_set.webp");
             }
             
-            .thumb_4 {
-                background-image: url("../my_assets/misc/thumbs/trash_day.webp");
+            .thumb_3 {
+                background-image: url("../my_assets/misc/thumbs/rainbow_bowl.webp");
             }
             
-            .thumb_5 {
+            .thumb_4 {
                 background-image: url("../my_assets/misc/benchwarmer.jpg");
             }
             
-            .thumb_6 {
-                background-image: url("../my_assets/misc/thumbs/retti_egg.webp");
+            .thumb_5 {
+                background-image: url("../my_assets/misc/thumbs/trash_day.webp");
             }
             
-            .thumb_7 {
+            .thumb_6 {
                 background-image: url("../my_assets/misc/portrait_as_bag.jpg");
             }
             
-            .thumb_8 {
+            .thumb_7 {
                 background-image: url("../my_assets/misc/pizza_slices.jpg");
+            }
+            
+            .thumb_8 {
+                background-image: url("../my_assets/misc/thumbs/retti_egg.webp");
             }
             
             .thumb_9 {
                 background-image: url("../my_assets/misc/two_tone_vases.jpg");
+            }
+            
+            figcaption {
+                filter: opacity(.5);
+                font-size: .8rem;
             }
