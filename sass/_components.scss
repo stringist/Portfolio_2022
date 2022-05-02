@@ -112,7 +112,19 @@ audio {
     margin: auto;
     margin-bottom: 6rem;
     &:hover {
-        color: #fff;
-        background: #222;
+        transition: all 0.3s;
+        transform: translate(-3px, -3px);
+        background: #ffffff;
+        // font-size: 1.05rem;
+        border: 1px solid #333;
+        color: #333;
+        box-shadow: 2.5px 2.5px 0px #333;
+        transform: scale();
+    }
+    &:active {
+        background-color: #333;
+        height: 3rem;
+        border: none;
+        color: var(--primary-light);
     }
 }
