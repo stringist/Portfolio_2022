@@ -160,6 +160,7 @@
                 /* toggle switch styling */
                 
                 .toggle_container {
+                    display: none;
                     /* border: solid 1px hotpink; */
                     margin-left: auto;
                     margin-right: 1.5rem;
@@ -1242,4 +1243,8 @@
                     // width="560" height="315"
                     width: 100%;
                     height: 46vw;
+                }
+                
+                aside {
+                    display: none
                 }
