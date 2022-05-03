@@ -436,11 +436,6 @@
                             transition: all .3s;
                         }
                         a {
-                            // padding-top: .8rem;
-                            // padding-bottom: .8rem;
-                            // padding-right: 12rem;
-                            // padding-left: 1rem;
-                            // margin-left: -1rem;
                             color: $grey;
                         }
                     }
@@ -492,6 +487,23 @@
                         margin-bottom: 32vw;
                         display: flex;
                         flex-direction: column;
+                    }
+                }
+                
+                .button_states {
+                    border: solid .5px #666;
+                    padding: 6vw 2vw;
+                    margin: auto 4vw;
+                    display: flex;
+                    // gap: 3rem;
+                    justify-content: space-evenly;
+                }
+                
+                .button_states img {
+                    width: 20%;
+                    height: auto;
+                    @media screen and (max-width: 850px) {
+                        width: 30%;
                     }
                 }
                 
