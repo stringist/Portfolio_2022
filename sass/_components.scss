@@ -138,7 +138,7 @@
         right: 0px;
         width: 3.5rem;
         height: 3rem;
-        background: #fff;
+        background: rgba(255, 255, 255, 0.96);
         // box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
         display: flex;
         justify-content: space-between;
@@ -158,12 +158,6 @@
         transition: width 0.5s, height 0.5s;
         transition-delay: 0s, 0.75s;
         text-align: center;
-    }
-    
-    .burger .userBx .username {
-        white-space: nowrap;
-        color: #555;
-        font-size: 1.1em;
     }
     
     .menu {
@@ -206,6 +200,7 @@
         // gap: 10px;
         margin: 25px 0;
         font-size: 1.2rem;
+        font-weight: 500;
         text-decoration: none;
         color: #222;
         // &:hover {
