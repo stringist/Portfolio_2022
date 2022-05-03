@@ -11,7 +11,6 @@ export function startAnimations() {
     screenAni();
     getSVGS();
     hogwartsAni();
-    gwcAni();
 }
 // animations
 
