@@ -16,6 +16,7 @@
 	                impact: resolve(__dirname, "impact.html"),
 	                party_devil: resolve(__dirname, "party_devil.html"),
 	                responsive: resolve(__dirname, "responsive.html"),
+	                misc: resolve(__dirname, "misc.html"),
 	            },
 	        },
 	    },
