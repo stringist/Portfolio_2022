@@ -156,6 +156,9 @@
                         background-color: #cbcbcb4e;
                         // filter: opacity(.7);
                     }
+                    @media screen and (max-width: 600px) {
+                        display: none;
+                    }
                 }
                 /* toggle switch styling */
                 
