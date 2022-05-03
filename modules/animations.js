@@ -27,8 +27,13 @@ function getSVGS() {
         .then((e) => e.text())
         .then((d) => {
             document.querySelector(".framework_graphic").insertAdjacentHTML("afterbegin", d);
-            // document.querySelector(".framework_graphic_main").insertAdjacentHTML("afterbegin", d);
             frameworksAni();
+        });
+    fetch("../my_assets/glass_group.svg")
+        .then((e) => e.text())
+        .then((d) => {
+            document.querySelector(".glass_group").insertAdjacentHTML("afterbegin", d);
+            glassAni();
         });
     // fetch("../my_assets/party_devil_left.svg")
     //     .then((e) => e.text())
@@ -141,13 +146,29 @@ function hogwartsAni() {
     to(icons, { y: '+=9', ease: "none", duration: 2, stagger: .5, delay: -2 });
 }
 
-function gwcAni() {
-    const logoStuff = document.querySelectorAll(".gwc_graphic svg path");
-    console.log(logoStuff);
-    const fadetl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
-    fadetl.fromTo(logoStuff, { duration: .1, opacity: 0, stagger: { each: .1 } }, { duration: 2, opacity: .9, stagger: { each: .08, ease: "sine" } });
-    fadetl.to(logoStuff, { delay: 3, opacity: 0, duration: 1.5 })
+function glassAni() {
+    const paths = document.querySelectorAll(".glass_group svg path");
+    const circles = document.querySelectorAll(".glass_group svg circle");
+    const ellipses = document.querySelectorAll(".glass_group svg ellipse");
+    const polys = document.querySelectorAll(".glass_group svg polygon");
+    const svgContent = [paths, circles, polys, ellipses];
+    // const svgContent = document.querySelectorAll(".glass_group svg *");
+    const fadetl = gsap.timeline({ repeat: -1, repeatDelay: 0, yoyo: true });
+    fadetl.fromTo(svgContent, { duration: .1, opacity: .3, stagger: { each: .1 } }, { duration: .4, opacity: .9, stagger: { each: .1, ease: "sine" } });
+    fadetl.to(svgContent, { delay: 2, opacity: .2, duration: .005 })
 }
+
+// function glassAni() {
+//     const svg = document.querySelector(".glass_group");
+//     const svgContent = document.querySelectorAll(".glass_group svg *")
+//     gsap.to(svg, { opacity: .5, duration: 5, yoyo: true, repeat: -1, ease: "sine", repeatDelay: 1, });
+
+//     const tlIconBounce = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+
+//     tlIconBounce.
+//     to(svgContent, { y: '-.5', ease: "none", duration: .5, stagger: .1, delay: -2 });
+//     to(svgContent, { y: '.5', ease: "none", duration: .5, stagger: .1, delay: -2 });
+// }
 
 function frameworksAni() {
 
