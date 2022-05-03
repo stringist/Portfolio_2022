@@ -27,6 +27,7 @@ function getSVGS() {
         .then((e) => e.text())
         .then((d) => {
             document.querySelector(".framework_graphic").insertAdjacentHTML("afterbegin", d);
+            // document.querySelector(".framework_graphic_main").insertAdjacentHTML("afterbegin", d);
             frameworksAni();
         });
     // fetch("../my_assets/party_devil_left.svg")
