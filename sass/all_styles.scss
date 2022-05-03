@@ -813,7 +813,7 @@
                     display: grid;
                     // place-items: center;
                     grid-template-columns: 55% 45%;
-                    margin: 0vw 4vw 0 4vw;
+                    margin: 0vw 6rem;
                     @media screen and (max-width: 850px) {
                         display: flex;
                         flex-direction: column;
@@ -1262,4 +1262,36 @@
                 
                 aside {
                     display: none
+                }
+                
+                //------ tech gallery -----------
+                .tech_stack {
+                    margin: 4vw 6rem;
+                    margin-bottom: 6rem;
+                    h2 {
+                        font-size: 2rem;
+                    }
+                }
+                
+                .tech_gallery {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 2rem;
+                    margin: 2rem auto 4rem auto;
+                    width: 90%;
+                    // border: $test;
+                    justify-content: space-between;
+                    align-items: center;
+                    img {
+                        max-width: 2.6rem;
+                        max-height: 2.6rem;
+                    }
+                    svg {
+                        max-width: 2.6rem;
+                        max-height: 2.6rem;
+                    }
+                }
+                
+                i {
+                    font-size: 3rem;
                 }
