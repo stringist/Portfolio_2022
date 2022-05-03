@@ -17,13 +17,13 @@ export function startAnimations() {
 
 function getSVGS() {
 
-    fetch("./my_assets/party_devil_sketch.svg")
+    fetch("../my_assets/party_devil_sketch.svg")
         .then((e) => e.text())
         .then((d) => {
             document.querySelector(".party_devil_container").insertAdjacentHTML("afterbegin", d);
             devilAni();
         });
-    fetch("./my_assets/SVG/cube_city.svg")
+    fetch("../my_assets/SVG/cube_city.svg")
         .then((e) => e.text())
         .then((d) => {
             document.querySelector(".framework_graphic").insertAdjacentHTML("afterbegin", d);
