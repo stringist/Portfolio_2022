@@ -28,6 +28,7 @@ function topFunction() {
     bttButton.addEventListener("click", scrollToTop);
 
     function scrollToTop() {
+        console.log("scroll");
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
