@@ -3,7 +3,7 @@
         margin-left: 4vw;
         margin-right: 4vw;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 50% 50%;
         place-items: center;
         margin-bottom: 8rem;
         h1 {
@@ -255,4 +255,31 @@
     
     .burger.active .menuToggle::after {
         transform: translateY(0px) rotate(-45deg);
+    }
+    
+    // microlight
+    pre {
+        padding: 1rem;
+        overflow: scroll;
+        width: 45vw;
+        height: 20rem;
+        place-self: center;
+        margin: auto 4rem;
+        @media screen and (max-width: 850px) {
+            width: 90vw;
+        }
+    }
+    
+    .microlight {
+        font-family: monospace;
+        white-space: pre;
+        background-color: rgb(1, 5, 7);
+        color: #adefff;
+        text-shadow: 0px 0px 9px rgba(181, 248, 255, 0.701), 0px 0px 2px rgba(146, 234, 244, 0.4);
+        padding: 1rem;
+        overflow: scroll;
+        max-width: 80%;
+        height: 18rem;
+        place-self: center;
+        margin: auto 4rem;
     }

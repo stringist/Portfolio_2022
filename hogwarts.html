@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <title>Hacked Hogwarts List</title>
 </head>
@@ -15,15 +15,13 @@
             <a href="index.html" class="nav_logo">KT</a>
 
             <div class="toggle_container">
-                <input type="checkbox" id="toggle_button">
+                <input type="checkbox" id="toggle_button" />
                 <label for="toggle_button" class="switch"></label>
-
             </div>
             <div class="links">
                 <div class="nav_box"><a href="./index.html#projects">Work</a></div>
                 <div class="nav_box"><a href="./about.html">About</a></div>
                 <div class="nav_box"><a href="./index.html#contact">Contact</a></div>
-
             </div>
             <div class="burger">
                 <div class="menuToggle"></div>
@@ -45,95 +43,300 @@
         <article class="detail_card_right_img">
             <div class="detail_card_text">
                 <h1>Hacked Hogwarts List</h1>
-                <p>This Harry Potter-themed project is from our six-week 'Just JavaScript' theme, in which we learned a great deal about string methods, array methods, working with many moving parts, conditional logic, and generic functions. We received
-                    the student data in a JSON file that was riddled with errors such as random capitalization, and the first step on this complex project was to clean the data so we had a properly formatted and capitalized set of data to work with.</p>
-                <a href=" https://stringist.github.io/hogwarts_list_1/" class="arrow_link" target="blank">See the project here &#x2794;</a>
-
-            </div>
-            <div class="detail_card_img_container">
-                <img class="detail_image" src="./my_assets/hogwarts_mockup.png" alt="solution mockup" />
-            </div>
-        </article>
-        <article class="detail_card_left_img">
-            <div class="detail_card_img_container ">
-                <img class="detail_image " src="./my_assets/advice/advice_mockup.png " alt="title screen screenshot " />
-            </div>
-            <div class="detail_card_text">
-                <p>The user can sort students by first name or last name, house, blood status, and whether they are prefects or members of the 'inquisitorial squad'. They can also expel students, appoint and un-appoint prefects, and appoint inquisitors with
-                    the requisite blood status. There is also a built-in 'hack the system' function which inserts the user into the student list and makes them unexpellable, and affects some of the other functions, for example randomizing the blood status
-                    algorithm in order to sabotage the inquisitorial squad system.</p>
-            </div>
-        </article>
-        <article class="detail_card_right_img">
-            <div class="detail_card_text ">
-                <p>I wanted to create something that reflected the visual universe of the Harry Potter series, and to that end I tried to make something that looked somewhat like it was hand-written on parchment. I created a series of icons to further this
-                    aesthetic.
+                <p>
+                    This Harry Potter-themed project is from our six-week 'Just JavaScript' theme, in which we learned a great deal about string methods, array methods, working with many moving parts, conditional logic, and generic functions. We received the student data
+                    in a JSON file that was riddled with errors such as random capitalization, and the first step on this complex project was to clean the data so we had a properly formatted and capitalized set of data to work with.
                 </p>
-            </div>
-            <div class="stacked_flex ">
-                <div class="detail_card_img_container flex_container ">
-                    <div class="hp pref "></div>
-                    <div class="hp squad "></div>
+                <a href=" https://stringist.github.io/hogwarts_list_1/" class="arrow_link" target="blank">See the project here &#x2794;</a
+          >
+        </div>
+        <div class="detail_card_img_container">
+          <img class="detail_image" src="./my_assets/hogwarts_mockup.png" alt="solution mockup" />
+        </div>
+      </article>
+      <article class="detail_card_left_img">
+        <div class="detail_card_img_container">
+          <pre class="microlight">
+<code>
+function selectFilter(event) {
+    const filter = event.target.dataset.filter;
+    setFilter(filter);
+}
 
-                </div>
-                <div class="detail_card_img_container flex_container ">
-                    <div class="hp m_blood "></div>
-                    <div class="hp h_blood "></div>
-                    <div class="hp f_blood "></div>
-                </div>
-            </div>
-        </article>
-        <article class="detail_card_left_img ">
-            <div class="detail_card_img_container ">
-                <img class="detail_image " src="./my_assets/advice/advice_mockup.png " alt="title screen screenshot " />
-            </div>
-            <div class="detail_card_text ">
-                <p>One of the many challenges in coding this project was to be able to check the student names imported from one JSON file against a list of pure- and half-blood family names listed in a separate JSON file.</p>
-            </div>
-        </article>
+function setFilter(filter) {
+    settings.filterBy = filter;
+    buildList();
+}
+
+function filterList(filteredList) {
+    if (
+        settings.filterBy === &quot;gryffindor&quot; ||
+        settings.filterBy === &quot;hufflepuff&quot; ||
+        settings.filterBy === &quot;ravenclaw&quot; ||
+        settings.filterBy === &quot;slytherin&quot;
+    ) {
+        filteredList = allStudents.filter(houseFilter);
+    } else {
+        filteredList = allStudents;
+    }
+
+    function houseFilter(student) {
+        //console.log(student);
+        if (student.house.toLowerCase() === settings.filterBy) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    return filteredList;
+}
+
+function selectSort(event) {
+    console.log(`global sortBy going into selectsort is ${settings.sortBy}`);
+    const sortBy = event.target.dataset.sort;
+    const sortDir = event.target.dataset.sortDirection;
+    console.log(`select sort function sortby is ${sortBy}, sortDir is ${sortDir}`);
+    // find old sortBy elelment
+    console.log(`oldElememt is [data-sort='${settings.sortBy}']`);
+    const oldElement = document.querySelector(`[data-sort='${settings.sortBy}']`);
+    oldElement.classList.remove(&quot;sortby&quot;);
+    // indicate active sort
+    event.target.classList.add(&quot;sortby&quot;);
+    // toggle direction
+    if (sortDir === &quot;asc&quot;) {
+        event.target.dataset.sortDirection = &quot;desc&quot;;
+    } else {
+        event.target.dataset.sortDirection = &quot;asc&quot;;
+    }
+    console.log(`User selected ${settings.sortBy} - ${settings.sortDir}`);
+    setSort(sortBy, sortDir);
+}
+
+function setSort(sortBy, sortDir) {
+    console.log(`setSort sortBY is ${sortBy}, sortDir is ${sortDir}`);
+    settings.sortBy = sortBy;
+    settings.sortDir = sortDir;
+    buildList();
+}
+
+function sortList(sortedList) {
+    let direction = 1;
+
+    if (settings.sortDir === &quot;desc&quot;) {
+        direction = -1;
+    } else {
+        direction = 1;
+    }
+
+    if (settings.sortBy === &quot;name&quot;) {
+        if (settings.firstNamelastName === true) {
+            sortedList = sortedList.sort(sortByFirstName);
+        } else {
+            sortedList = sortedList.sort(sortByLastName);
+        }
+    } else {
+        sortedList = sortedList.sort(sortByProperty);
+    }
+
+    function sortByFirstName(studentA, studentB) {
+        if (studentA.firstName &lt; studentB.firstName) {
+            return -1 * direction;
+        } else {
+            return 1 * direction;
+        }
+    }
+
+    function sortByLastName(studentA, studentB) {
+        if (studentA.lastName &lt; studentB.lastName) {
+            return -1 * direction;
+        } else {
+            return 1 * direction;
+        }
+    }
+
+    function sortByProperty(studentA, studentB) {
+        if (studentA[settings.sortBy] &lt; studentB[settings.sortBy]) {
+            return -1 * direction;
+        } else {
+            return 1 * direction;
+        }
+    }
+    return sortedList;
+}
+</code></pre>
+        </div>
+
+        <div class="detail_card_text">
+          <p>
+            The user can sort students by first name or last name, house, blood status, and whether they are prefects or
+            members of the 'inquisitorial squad'. They can also expel students, appoint and un-appoint prefects, and
+            appoint inquisitors with the requisite blood status. There is also a built-in 'hack the system' function
+            which inserts the user into the student list and makes them unexpellable, and affects some of the other
+            functions, for example randomizing the blood status algorithm in order to sabotage the inquisitorial squad
+            system.
+          </p>
+        </div>
+      </article>
+      <article class="detail_card_right_img">
+        <div class="detail_card_text">
+          <p>
+            I wanted to create something that reflected the visual universe of the Harry Potter series, and to that end
+            I tried to make something that looked somewhat like it was hand-written on parchment. I created a series of
+            icons to further this aesthetic.
+          </p>
+        </div>
+        <div class="stacked_flex">
+          <div class="detail_card_img_container flex_container">
+            <div class="hp pref"></div>
+            <div class="hp squad"></div>
+          </div>
+          <div class="detail_card_img_container flex_container">
+            <div class="hp m_blood"></div>
+            <div class="hp h_blood"></div>
+            <div class="hp f_blood"></div>
+          </div>
+        </div>
+      </article>
+      <article class="detail_card_left_img">
+        <div class="detail_card_img_container">
+          <pre class="microlight">
+<code>
+async function loadJSON() {
+    const response = await fetch(&quot;students.json&quot;);
+    const jsonData = await response.json();
+
+    const famResponse = await fetch(&quot;families.json&quot;);
+    const famData = await famResponse.json();
+
+    await makeFamObj(famData);
+    cleanData(jsonData);
+}
+
+async function makeFamObj(famData) {
+    famData.half.forEach((name) =&gt; {
+        familiesObj.half.push(name);
+    });
+    famData.pure.forEach((name) =&gt; {
+        familiesObj.pure.push(name);
+    });
+}
+
+function getBloodStatus(student) {
+    const halfBloodArr = familiesObj.half;
+    const pureBloodArr = familiesObj.pure;
+    const lastName = student.lastName;
+    if (settings.hacked === true) {
+        const random = Math.floor(Math.random() * 3);
+
+        const bloodArr = [&quot;half&quot;, &quot;full&quot;, &quot;muggle&quot;];
+
+        return bloodArr[random];
+
+    } else {
+        if (isNameListed(halfBloodArr, lastName)) {
+            return &quot;half&quot;;
+        } else if (isNameListed(pureBloodArr, lastName)) {
+            return &quot;full&quot;;
+        } else {
+            return &quot;muggle&quot;;
+        }
+
+        function isNameListed(arr, name) {
+            return arr.includes(name);
+        }
+    }
+}</code>
+</pre>
+        </div>
+        <div class="detail_card_text">
+          <p>
+            One of the many challenges in coding this project was to be able to check the student names imported from
+            one JSON file against a list of pure- and half-blood family names listed in a separate JSON file.
+          </p>
+        </div>
+      </article>
     </section>
 
-    <button class="back_to_top ">Back to top <svg xmlns="http://www.w3.org/2000/svg " width="20 " height="20 " fill="currentColor " class="bi bi-arrow-up-short " viewBox="0 0 16 16 ">
-  <path fill-rule="evenodd " d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z "/>
-</svg></button>
+    <button class="back_to_top">
+      Back to top
+      <svg
+        xmlns="http://www.w3.org/2000/svg "
+        width="20 "
+        height="20 "
+        fill="currentColor "
+        class="bi bi-arrow-up-short"
+        viewBox="0 0 16 16 "
+      >
+        <path
+          fill-rule="evenodd "
+          d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z "
+        />
+      </svg>
+    </button>
     <footer>
-        <div class="tel_email">
-            <div class="contact_info">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+      <div class="tel_email">
+        <div class="contact_info">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-envelope-fill"
+            viewBox="0 0 16 16"
+          >
             <path
-              d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+              d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"
+            />
           </svg>
-                <p id="email_address">kalletiihonen@hotmail.com</p>
-                <div class="copy_email" title="Copy to clipboard" cursor="pointer" data-clipboard-target="#email_address">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
+          <p id="email_address">kalletiihonen@hotmail.com</p>
+          <div class="copy_email" title="Copy to clipboard" cursor="pointer" data-clipboard-target="#email_address">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-paperclip"
+              viewBox="0 0 16 16"
+            >
               <path
-                d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"/>
+                d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"
+              />
             </svg>
-                </div>
-            </div>
+          </div>
+        </div>
 
-            <div class="contact_info">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+        <div class="contact_info">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-telephone-fill"
+            viewBox="0 0 16 16"
+          >
             <path
               fill-rule="evenodd"
-              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+            />
           </svg>
-                <p><a class="tel" href=":tel:+4542910822">+45 42 91 08 22</a></p>
+          <p><a class="tel" href=":tel:+4542910822">+45 42 91 08 22</a></p>
             </div>
-
-        </div>
-        <a href="https://www.linkedin.com/in/kalle-tiihonen/"><svg
+            </div>
+            <a href="https://www.linkedin.com/in/kalle-tiihonen/"><svg
           xmlns="http://www.w3.org/2000/svg"
           width="40"
           height="40"
           fill="currentColor"
           class="bi bi-linkedin"
-          viewBox="0 0 16 16">
+          viewBox="0 0 16 16"
+        >
           <path
-            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg></a>
-    </footer>
+            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+          /></svg
+      ></a>
+            </footer>
 </body>
-
+<script src="./modules/microlight.js"></script>
 <script type="module" src="/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
 

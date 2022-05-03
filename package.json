@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "clipboard": "^2.0.10",
-    "gsap": "^3.9.1"
+    "gsap": "^3.9.1",
+    "microlight": "^0.0.7"
   }
 }
