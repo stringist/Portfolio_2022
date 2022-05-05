@@ -99,7 +99,7 @@
                 }
                 
                 a {
-                    color: inherit;
+                    color: $grey;
                 }
                 
                 nav {
@@ -422,6 +422,7 @@
                 .links_list ul {
                     height: 100%;
                     li button {
+                        color: $grey;
                         height: 2.9rem;
                         width: 100%;
                         text-align: left;
@@ -495,6 +496,7 @@
                 }
                 
                 .button_states {
+                    color: $grey;
                     border: solid .5px #666;
                     padding: 6vw 2vw;
                     margin: auto 4vw;
