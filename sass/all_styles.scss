@@ -1317,4 +1317,7 @@
                     grid-column: 2/4;
                     width: 80%;
                     margin: auto;
+                    @media screen and (max-width: 850px) {
+                        order: -1;
+                    }
                 }
