@@ -101,9 +101,7 @@ function devilAni() {
     const allContent = document.querySelectorAll(".party_devil_container svg *");
     const devilContainer = document.querySelector(".party_devil_container");
 
-
-    // "assembling"
-    // effect
+    // assembling effect
     gsap.from(svgContent, {
         delay: -.5,
         duration: 2.5,
