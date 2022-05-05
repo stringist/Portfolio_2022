@@ -830,7 +830,7 @@
                     @media screen and (max-width: 850px) {
                         display: flex;
                         flex-direction: column;
-                        margin: 0vw 4vw;
+                        margin: 0vw 1vw;
                     }
                 }
                 
@@ -1284,6 +1284,9 @@
                     margin-bottom: 6rem;
                     h2 {
                         font-size: 2rem;
+                    }
+                    @media screen and (max-width: 850px) {
+                        margin: 4vw 1vw;
                     }
                 }
                 
